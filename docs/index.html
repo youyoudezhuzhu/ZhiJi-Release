@@ -21,27 +21,36 @@ pre{white-space:pre-wrap;color:#6f6a61;font-size:13px;margin:0}
 <h1>织记 · 自然</h1>
 <p>本地优先的手作记录应用 · Android 8.0+</p>
 <div class="card">
-<p><strong>最新版本 9.9.9-test（versionCode 999999）</strong></p>
+<p><strong>最新版本 1.2.1a4（versionCode 6）</strong></p>
 <a class="btn" href="dl/latest.apk">下载最新 APK（76.9 MB）</a>
 <p>下载后请覆盖安装，数据会保留；升级前建议先在 App 内做完整备份。</p>
 </div>
 <div class="card">
-<p>SHA-256：<code>d0752d8814ce280c2b792bdccf1a6182331e5a08b741a7aa85ba50ac1ac6b87c</code></p>
+<p>SHA-256：<code>1774f88e40e664619d03c6e36e2f2310ad7a5877004f3a795d8169c62f748379</code></p>
 <p>签名证书：<code>32d3c3d60d76519669941cda0878a560e65d61453f4f59164eaceda30d93015e</code></p>
-<p>构建提交：<code>a66bbeef4951f13be5266b04f9af99f8da498fbc</code></p>
-<p>发布时间：2026-11-09T12:51:44Z</p>
+<p>构建提交：<code>79505195dd628d4f49e56a6cb4083f2201ae34c0</code></p>
+<p>发布时间：2026-11-09T14:47:09Z</p>
 </div>
 <div class="card">
 <p><strong>更新说明</strong></p>
-<pre>## ⚠️ 测试版本（请勿安装）
+<pre>## 织记 v1.2.1a4
 
-这是用于验证「检查更新」功能的**假版本 APK**：versionCode 999999、versionName 9.9.9-test，内容与当前版本相同，仅版本号被调高。
+首个通过 GitHub Pages 在线更新的正式版本。
 
-- 目的是让 App 内「设置 → 检查更新」能够检测到"新版本"并走完检测/下载/校验流程。
-- **请勿真正安装**：安装后由于版本号极高，后续正式版本会被系统视为降级，需要卸载重装。
-- 验证完成后该测试 Release 会被删除或替换为正式版本。
+### 本版内容
+- **在线更新**：设置 → 检查更新。更新清单优先从 GitHub Pages 读取（raw 作为兜底并行竞速），只比较 versionCode。
+- 下载优先走 Pages 直链（实测约 8 MB/s）；失败才回退 Release 镜像。下载后校验 SHA-256、包名、版本号与 APK 签名，通过后才交给系统安装器。
+- 弱网优化：清单超时 5s/整体 8s；下载连接停滞 20s 自动换源；下载界面显示实时速度、大小与来源。
+- 版本 1.2.1a4 / versionCode 6。
 
-正式版本 1.2.1a3 目前只保存在私有源码库，未在公开更新仓库发布。</pre>
+### 验证
+- JVM 327 项全部通过（含 UpdateTest 10 项）。
+- Debug/Release 均原签名（证书 SHA-256 `32d3c3d6…`）。
+- 真机验证：a3 老版本可检测到本版本并完成下载、SHA-256 与签名校验。
+
+### 安装
+- 覆盖安装保留全部数据；升级前建议先在 App 内做完整备份。
+- 包名 `com.buku.fabric`，仅支持 Android 8.0+。</pre>
 </div>
 <p class="foot">更新清单：<a href="dl/stable.json">dl/stable.json</a> · 历史版本见 <a href="https://github.com/youyoudezhuzhu/ZhiJi-Release/releases">GitHub Releases</a></p>
 <p class="foot">所有文件通过 HTTPS 分发；App 下载后会校验 SHA-256 与 APK 签名。</p>

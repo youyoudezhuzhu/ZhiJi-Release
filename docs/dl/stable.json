@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "channel": "stable",
-  "version_name": "9.9.9-test",
-  "version_code": 999999,
-  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=999999",
-  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v9.9.9-test/ZhiJi-v9.9.9-test-original-signed.apk",
-  "sha256": "d0752d8814ce280c2b792bdccf1a6182331e5a08b741a7aa85ba50ac1ac6b87c",
+  "version_name": "1.2.1a4",
+  "version_code": 6,
+  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=6",
+  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1a4/ZhiJi-v1.2.1a4-original-signed.apk",
+  "sha256": "1774f88e40e664619d03c6e36e2f2310ad7a5877004f3a795d8169c62f748379",
   "signer_sha256": "32d3c3d60d76519669941cda0878a560e65d61453f4f59164eaceda30d93015e",
-  "source_commit": "a66bbeef4951f13be5266b04f9af99f8da498fbc",
-  "notes": "## ⚠️ 测试版本（请勿安装）\n\n这是用于验证「检查更新」功能的**假版本 APK**：versionCode 999999、versionName 9.9.9-test，内容与当前版本相同，仅版本号被调高。\n\n- 目的是让 App 内「设置 → 检查更新」能够检测到\"新版本\"并走完检测/下载/校验流程。\n- **请勿真正安装**：安装后由于版本号极高，后续正式版本会被系统视为降级，需要卸载重装。\n- 验证完成后该测试 Release 会被删除或替换为正式版本。\n\n正式版本 1.2.1a3 目前只保存在私有源码库，未在公开更新仓库发布。",
-  "published_at": "2026-11-09T12:51:44Z"
+  "source_commit": "79505195dd628d4f49e56a6cb4083f2201ae34c0",
+  "notes": "## 织记 v1.2.1a4\n\n首个通过 GitHub Pages 在线更新的正式版本。\n\n### 本版内容\n- **在线更新**：设置 → 检查更新。更新清单优先从 GitHub Pages 读取（raw 作为兜底并行竞速），只比较 versionCode。\n- 下载优先走 Pages 直链（实测约 8 MB/s）；失败才回退 Release 镜像。下载后校验 SHA-256、包名、版本号与 APK 签名，通过后才交给系统安装器。\n- 弱网优化：清单超时 5s/整体 8s；下载连接停滞 20s 自动换源；下载界面显示实时速度、大小与来源。\n- 版本 1.2.1a4 / versionCode 6。\n\n### 验证\n- JVM 327 项全部通过（含 UpdateTest 10 项）。\n- Debug/Release 均原签名（证书 SHA-256 `32d3c3d6…`）。\n- 真机验证：a3 老版本可检测到本版本并完成下载、SHA-256 与签名校验。\n\n### 安装\n- 覆盖安装保留全部数据；升级前建议先在 App 内做完整备份。\n- 包名 `com.buku.fabric`，仅支持 Android 8.0+。",
+  "published_at": "2026-11-09T14:47:09Z"
 }
