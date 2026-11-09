@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "channel": "stable",
+  "version_name": "9.9.9-test",
+  "version_code": 999999,
+  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=999999",
+  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v9.9.9-test/ZhiJi-v9.9.9-test-original-signed.apk",
+  "sha256": "d0752d8814ce280c2b792bdccf1a6182331e5a08b741a7aa85ba50ac1ac6b87c",
+  "signer_sha256": "32d3c3d60d76519669941cda0878a560e65d61453f4f59164eaceda30d93015e",
+  "source_commit": "a66bbeef4951f13be5266b04f9af99f8da498fbc",
+  "notes": "## ⚠️ 测试版本（请勿安装）\n\n这是用于验证「检查更新」功能的**假版本 APK**：versionCode 999999、versionName 9.9.9-test，内容与当前版本相同，仅版本号被调高。\n\n- 目的是让 App 内「设置 → 检查更新」能够检测到\"新版本\"并走完检测/下载/校验流程。\n- **请勿真正安装**：安装后由于版本号极高，后续正式版本会被系统视为降级，需要卸载重装。\n- 验证完成后该测试 Release 会被删除或替换为正式版本。\n\n正式版本 1.2.1a3 目前只保存在私有源码库，未在公开更新仓库发布。",
+  "published_at": "2026-11-09T12:51:44Z"
+}
