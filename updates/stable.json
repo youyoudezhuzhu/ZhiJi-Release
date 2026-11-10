@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "channel": "stable",
-  "version_name": "1.2.1a6",
-  "version_code": 8,
-  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=8",
-  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1a6/ZhiJi-v1.2.1a6-original-signed.apk",
-  "sha256": "9b7214cb4ad9c901da6cee071b4c9119622431c187f8cd16b0fbc636bbc0253e",
+  "version_name": "1.2.1a7",
+  "version_code": 9,
+  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=9",
+  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1a7/ZhiJi-v1.2.1a7-original-signed.apk",
+  "sha256": "7f79e5cfa69391df8a3e4336607b019e56e9c8fe8ac935826760e097505429de",
   "signer_sha256": "32d3c3d60d76519669941cda0878a560e65d61453f4f59164eaceda30d93015e",
-  "source_commit": "3fec5539b7f366457446bdccc00298dd77d9b282",
-  "notes": "## 织记 v1.2.1a6\n\n本版为全局动效重构 + 截图核对页体验修正。\n\n### 本版内容\n- **全局动效统一**：统一 BukuMotion 动效 Token、页面转场分层（BukuPageLayer）、弹窗/Sheet/菜单共用动效、按压/选择反馈、列表增删让位动画；减少动态效果（系统动画 0×）会即时到终点。\n- **图片核对页**：单击订单截图可打开全屏大图（双指缩放、双击还原），新增「查看大图」按钮；「布料名称」单行显示，与「购买店铺/长度/幅宽/总价」标签对齐。\n- **截图识别店铺自动建标签**：识别完成后把店铺名自动登记为「店铺」分类标签（已存在则跳过），逐项保存时直接复用。\n- 色板改为不可变展示快照，主题切换与纹理/磨砂保持原有行为；未改业务数据或备份格式。\n- 版本 1.2.1a6 / versionCode 8（高于 a5 的 7，可在线升级）。\n\n### 验证\n- 333 项 JVM 测试全绿（含新增动效策略/中断测试）。\n- Debug/Release 原签名；动效与 UI 静态检查通过。\n- 动效实际手感、性能与无障碍体验仍建议真机确认。\n\n### 安装\n- 覆盖安装保留全部数据；升级前建议先在 App 内做完整备份。\n- 包名 `com.buku.fabric`，支持 Android 8.0+。",
-  "published_at": "2026-11-10T04:40:25Z"
+  "source_commit": "bf28b0ed959c8e2ee7ef2573537c058b81de6af3",
+  "notes": "## 织记 v1.2.1a7\n\n本版新增「外观工作室」与可拖拽底部导航。\n\n### 本版内容\n- **外观工作室**：设置 → 外观，集中配色预设/三色自定义、字体、背景与卡片纹理、磨砂与透明度；预览使用真实 Token 与公共组件，改动即时生效。\n- **三色自定义**：只暴露主色/辅助色/点缀色，其余层级颜色自动推导；预设与自定义互不覆盖。\n- **可拖拽底部导航**：底栏可直接拖动跟手，松手提交一次；中央新增按钮起手不接管拖动，点击/Tab 选中语义保留。\n- 动效继续统一 BukuMotion，减少动态效果（系统 0×）即时到终点；未改业务数据与备份格式。\n- 版本 1.2.1a7 / versionCode 9（高于 a6 的 8，可在线升级）。\n\n### 验证\n- 343 项 JVM 测试全绿（新增 AppearanceColorTest、NavigationDragPolicyTest 等）。\n- Debug/Release 原签名；动效/UI 静态检查通过。\n- 外观实际观感、底栏拖拽手感与性能仍建议真机确认。\n\n### 安装\n- 覆盖安装保留全部数据；升级前建议先在 App 内做完整备份。\n- 包名 `com.buku.fabric`，支持 Android 8.0+。",
+  "published_at": "2026-11-10T06:58:42Z"
 }
