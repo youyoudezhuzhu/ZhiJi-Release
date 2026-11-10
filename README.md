@@ -10,6 +10,17 @@
 - 签名：固定为原证书，可直接覆盖升级；如提示签名不一致，请先卸载旧包但会丢失数据
 - 版本号规则：`1.2.1a1 → a9 → b1 → …`，向后递增
 
+## 发布机制（维护者）
+
+- Pages 使用 **GitHub Actions artifact 部署**（Settings → Pages → Source: GitHub Actions），
+  站点固定地址 `https://youyoudezhuzhu.github.io/ZhiJi-Release/`，直链 `dl/latest.apk` 不变。
+- `.github/workflows/sync-pages-apk.yml` 在 Release 发布后自动：
+  下载 Release 中的 APK / `update-manifest.json` → 校验 SHA-256 → 生成 `docs/dl/latest.apk` 与校验文件 →
+  只提交 `stable.json`、`index.html` 等小文件（**APK 永不进入 git**）→ 删除除当前 tag 外的旧 Release → 部署 Pages artifact。
+- 清单：`updates/stable.json`（raw 读取）与 `docs/dl/stable.json`（Pages 读取）内容一致。
+- 本地发布脚本（源码仓库 `zhiji/scripts/publish_update.py`）会先建 draft Release、上传资产后再发布，避免工作流抢跑。
+- 不要在 git 中提交任何 `.apk`；它们只属于 Release 资产与 Pages artifact。
+
 ## 说明
 
 - 本仓库不保存源码、不接收 Issue；问题反馈请在 App 内「设置 → 数据与支持 → 问题反馈」记录并导出诊断包。
