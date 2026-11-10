@@ -21,36 +21,42 @@ pre{white-space:pre-wrap;color:#6f6a61;font-size:13px;margin:0}
 <h1>织记 · 自然</h1>
 <p>本地优先的手作记录应用 · Android 8.0+</p>
 <div class="card">
-<p><strong>最新版本 1.2.1a8（versionCode 10）</strong></p>
-<a class="btn" href="dl/latest.apk">下载最新 APK（77.0 MB）</a>
+<p><strong>最新版本 1.2.1a9（versionCode 11）</strong></p>
+<a class="btn" href="dl/latest.apk">下载最新 APK（26.7 MB）</a>
 <p>下载后请覆盖安装，数据会保留；升级前建议先在 App 内做完整备份。</p>
 </div>
 <div class="card">
-<p>SHA-256：<code>4d0b43ba5a0f51b157f19ff58db13e7febd334dedadb9a4762563c2ff7e73e1c</code></p>
+<p>SHA-256：<code>1f31703d34a1b33f949c895e0f594336091348c799fb3b6881b36adecd037bbd</code></p>
 <p>签名证书：<code>32d3c3d60d76519669941cda0878a560e65d61453f4f59164eaceda30d93015e</code></p>
-<p>构建提交：<code>a8bab7f3c9637297fc59bfd86721c1a4ac46fcfa</code></p>
-<p>发布时间：2026-11-10T07:35:43Z</p>
+<p>构建提交：<code>b79cd196123b962b70946f4d7839fda8f22a9d6a</code></p>
+<p>发布时间：2026-11-10T09:17:11Z</p>
 </div>
 <div class="card">
 <p><strong>更新说明</strong></p>
-<pre>## 织记 v1.2.1a8
+<pre>## 织记 v1.2.1a9
 
-本版修复「更新下载取消后仍在继续下载 / 两条进度反复跳闪」的问题。
+本版主要做体积瘦身，并修复更新时间显示时区问题。
 
-### 本版内容
-- **可取消下载**：点「取消」会立即断开连接并删除半成品，不再在后台继续下载。
-- **修复两路进度跳闪**：下载增加代次控制，取消或重新下载后旧任务的进度回调全部作废；再点下载从 0 开始，不会和旧任务同时跑。
-- 防止连点/取消后立刻重下叠出第二个下载任务；离开更新页自动取消下载。
-- 单地址超时仍会自动换源重试；校验通过后改成稳定文件名。
-- 版本 1.2.1a8 / versionCode 10（高于 a7 的 9，可在线升级）。
+### 安装包体积：80.8MB → 28.0MB（约 -65%）
+- 移除只给模拟器用的 x86/x86_64 OCR 原生库（真机全是 ARM），约省 23MB。
+- 内置思源宋体改为子集（GB2312 6763 字 + 全部界面用字 + 常用符号），24.5MB → 4.7MB；生僻字回退系统字体。
+- 开启 R8 代码压缩与资源压缩，剥离未使用的图标/代码；清理重复启动图与旧密度图标。
+- 更新下载、安装校验、签名与数据格式均不变；在线更新包更小更快。
+
+### 修复
+- 更新页「发布时间」之前直接显示 UTC，比北京时间慢 8 小时；现在按设备本地时区显示（如北京时间）。
+- 顺带排查了全项目时间显示：创建/更新/使用/备份/反馈时间均按本地时区，未发现其它时区错位。
+
+### 版本
+- 1.2.1a9 / versionCode 11（高于 a8 的 10，可在线升级）。
 
 ### 验证
-- 343 项 JVM 测试全绿；Debug/Release 原签名；动效/UI 静态检查通过。
-- 更新下载改为阻塞读可中断：取消时用看门狗子协程断开 socket，真机取消/重下行为仍建议升级后实测。
+- 345 项 JVM 全绿；Debug/Release 原签名。
+- 发布包已做真机冒烟（启动、手作库、字体、截图识别、更新检查）。
 
 ### 安装
 - 覆盖安装保留全部数据；升级前建议先在 App 内做完整备份。
-- 包名 `com.buku.fabric`，支持 Android 8.0+。</pre>
+- 包名 `com.buku.fabric`，支持 Android 8.0+；不再支持 x86 模拟器安装。</pre>
 </div>
 <p class="foot">更新清单：<a href="dl/stable.json">dl/stable.json</a> · 历史版本见 <a href="https://github.com/youyoudezhuzhu/ZhiJi-Release/releases">GitHub Releases</a></p>
 <p class="foot">所有文件通过 HTTPS 分发；App 下载后会校验 SHA-256 与 APK 签名。</p>
