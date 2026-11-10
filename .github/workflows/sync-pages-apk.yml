@@ -1,0 +1,134 @@
+name: Sync latest APK to GitHub Pages
+
+# APK 只作为 Pages artifact 部署，绝不提交进 git。
+# stable.json 与 index.html 仍需提交（App 通过 raw.githubusercontent 读取清单）。
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag to sync (defaults to latest non-prerelease)
+        required: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: github.event_name == 'workflow_dispatch' || github.event.release.prerelease == false
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Resolve release tag
+        id: rel
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          INPUT_TAG: ${{ inputs.tag }}
+        run: |
+          set -euo pipefail
+          if [ -n "${INPUT_TAG:-}" ]; then tag="$INPUT_TAG"
+          else tag="$(gh release view --repo "$GITHUB_REPOSITORY" --json tagName --jq '.tagName')"
+          fi
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          mkdir -p /tmp/rel
+          gh release view "$tag" --repo "$GITHUB_REPOSITORY" --json body --jq .body > /tmp/rel/notes.md 2>/dev/null || true
+
+      - name: Download manifest and write meta.env
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ steps.rel.outputs.tag }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/rel
+          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" \
+            --pattern 'update-manifest.json' --dir /tmp/rel
+          python3 .github/scripts/write_meta.py /tmp/rel/update-manifest.json /tmp/rel/meta.env
+          cat /tmp/rel/meta.env
+
+      - name: Stage APK and metadata into the Pages artifact
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ steps.rel.outputs.tag }}
+        run: |
+          set -euo pipefail
+          source /tmp/rel/meta.env
+          apk_name="ZhiJi-v${VERSION}-original-signed.apk"
+          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" \
+            --pattern 'ZhiJi-v*-original-signed.apk' --dir /tmp/rel
+          got="$(find /tmp/rel -name 'ZhiJi-v*-original-signed.apk' | head -1)"
+          [ -n "$got" ] || { echo "APK asset not found"; exit 1; }
+          echo "asset sha: $(sha256sum "$got" | awk '{print $1}')"
+          echo "manifest : $SHA256"
+          [ "$(sha256sum "$got" | awk '{print $1}')" = "$SHA256" ] || { echo "APK sha mismatch"; exit 1; }
+
+          mkdir -p docs/dl
+          find docs/dl -maxdepth 1 -type f \( -name 'latest.apk' -o -name 'SHA256SUMS-*.txt' \) -delete
+          cp "$got" docs/dl/latest.apk
+          printf '%s  %s\n' "$SHA256" "$apk_name" > "docs/dl/SHA256SUMS-${VERSION}.txt"
+
+          # update-manifest.json 与 stable.json 同构：直接复制成两份清单
+          cp /tmp/rel/update-manifest.json updates/stable.json
+          cp /tmp/rel/update-manifest.json docs/dl/stable.json
+
+          python3 .github/scripts/render_index.py /tmp/rel/update-manifest.json \
+            "$(stat -c%s "$got")" docs/index.html
+
+      - name: Delete older releases and tags
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          KEEP_TAG: ${{ steps.rel.outputs.tag }}
+        run: |
+          set -euo pipefail
+          gh release list --repo "$GITHUB_REPOSITORY" --limit 100 \
+            --json tagName --jq '.[].tagName' | while read -r tag; do
+            [ -z "$tag" ] && continue
+            [ "$tag" = "$KEEP_TAG" ] && continue
+            echo "deleting release $tag"
+            gh release delete "$tag" --repo "$GITHUB_REPOSITORY" --yes --cleanup-tag || \
+              echo "::warning::could not delete release $tag"
+          done
+          gh release list --repo "$GITHUB_REPOSITORY" --limit 100
+
+      - name: Commit only small metadata (never the APK)
+        run: |
+          set -euo pipefail
+          source /tmp/rel/meta.env
+          git config user.name "ZhiJi Pages Bot"
+          git config user.email "pages-bot@zhiji.local"
+          git add updates/stable.json docs/dl/stable.json docs/dl/SHA256SUMS-*.txt docs/index.html
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "already in sync"
+            exit 0
+          fi
+          git commit -m "pages: sync ${VERSION} metadata (auto)"
+          git push origin HEAD:main
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    needs: sync
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
