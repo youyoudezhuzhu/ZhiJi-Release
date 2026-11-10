@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "channel": "stable",
-  "version_name": "1.2.1a11",
-  "version_code": 13,
-  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=13",
-  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1a11/ZhiJi-v1.2.1a11-original-signed.apk",
-  "sha256": "a76e9fa2fb4c4bd094ec3f1a834f2c6fb7907c2f82ba0ac612fe85315bd34c0e",
+  "version_name": "1.2.1a12",
+  "version_code": 14,
+  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=14",
+  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1a12/ZhiJi-v1.2.1a12-original-signed.apk",
+  "sha256": "579fbf4821b995fee4e1f90cb84b0835e3cc37d9fa7d4f09cdca3800bf1c5b09",
   "signer_sha256": "32d3c3d60d76519669941cda0878a560e65d61453f4f59164eaceda30d93015e",
-  "source_commit": "feac381f2532a968e403b719410a03579adf3556",
-  "notes": "## 织记 v1.2.1a11\n\n纸样使用记录改为「使用 / 复用」两态，另含物料选择与菜单细节优化。\n\n### 本版内容\n- **纸样使用/复用**：纸样每次最多用一份。添加使用记录时不再输入数量，改为「使用 / 复用」胶囊开关——使用则纸样数量减 1，复用则数量不变；使用记录列表直接显示「使用 / 复用」。\n- **快捷复记**：材料清单中的纸样记为复用（0 份），下次按清单复记时不会误扣纸样库存；制作多件也只算一次。\n- **保存为材料清单**：使用记录里含纸样时，自动生成的材料清单会把纸样记为复用。\n- **物料选择器**：与手作库一致，同类型同名物料自动折叠文件夹（布料含材质、纸样含尺码）；需展开文件夹才能选中内部物料，搜索/切换类型会重新分组。\n- **细节修复**：加号菜单各类条目改用独立识别色；三点菜单、用量单位切换等浮层菜单的圆角阴影不再被裁成直角。\n- 使用记录「米 · 平米」双单位显示、安装权限胶囊按钮、编辑页横向转场等前序修改一并包含。\n\n### 验证\n- 350 项 JVM 测试全绿；Debug/Release 原签名。\n- 版本 1.2.1a11 / versionCode 13（高于 a10 的 12，可在线升级）。\n\n### 安装\n- 覆盖安装保留全部数据；升级前建议先在 App 内做完整备份。\n- 包名 `com.buku.fabric`，支持 Android 8.0+。",
-  "published_at": "2026-11-10T13:12:43Z"
+  "source_commit": "81c01abf4e227ef95d0b02191d030f60869bb2ab",
+  "notes": "## 织记 v1.2.1a12\n\n文件夹展开/收起时的周边卡片让位动画修正，含上一版纸样使用/复用等全部内容。\n\n### 本版内容\n- **文件夹展开更顺滑**：手作库和物料选择器中，文件夹展开/收起时，文件夹外的后续卡片按同一进度连续让位，不再出现内部内容已展开、外部卡片瞬间被撑开的跳变；收起同样连续回收，不叠加第二套高度弹簧。\n- **上一版全部内容**：纸样使用/复用（使用扣 1 份、复用不扣库存、显示「使用/复用」）、材料清单纸样自动复用、物料选择器文件夹分组、加号菜单独立配色、浮层菜单圆角/阴影修复、使用记录「米 · 平米」双单位显示、安装权限胶囊按钮、编辑页横向转场。\n- 本版修复了上游文件夹动画改动在物料选择器里的一处编译问题。\n\n### 验证\n- 350 项 JVM 测试全绿；Debug/Release 原签名。\n- 版本 1.2.1a12 / versionCode 14（高于 a11 的 13，可在线升级）。\n\n### 安装\n- 覆盖安装保留全部数据；升级前建议先在 App 内做完整备份。\n- 包名 `com.buku.fabric`，支持 Android 8.0+。",
+  "published_at": "2026-11-10T15:13:51Z"
 }
