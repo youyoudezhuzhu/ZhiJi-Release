@@ -22,6 +22,9 @@ concurrency:
 
 jobs:
   sync:
+    # 本项目 1.2.1aN 是正式版本序列（aN → bN 递增，见 README），不是 alpha 测试版；
+    # 这里的 prerelease 检查只拦截临时测试包：手动标记 pre-release 的 Release 不更新
+    # stable.json / Pages，避免把测试包推给正式用户。
     if: github.event_name == 'workflow_dispatch' || github.event.release.prerelease == false
     runs-on: ubuntu-latest
     steps:
@@ -107,7 +110,8 @@ jobs:
           source /tmp/rel/meta.env
           git config user.name "ZhiJi Pages Bot"
           git config user.email "pages-bot@zhiji.local"
-          git add updates/stable.json docs/dl/stable.json docs/dl/SHA256SUMS-*.txt docs/index.html
+          # 用 -A 让旧版本校验文件的删除也进入本次提交，避免 docs/dl 里累积历史 SHA256SUMS。
+          git add -A updates docs/dl docs/index.html
           if [ -z "$(git status --porcelain)" ]; then
             echo "already in sync"
             exit 0
