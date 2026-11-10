@@ -20,6 +20,9 @@
 - 清单：`updates/stable.json`（raw 读取）与 `docs/dl/stable.json`（Pages 读取）内容一致。
 - 本地发布脚本（源码仓库 `zhiji/scripts/publish_update.py`）会先建 draft Release、上传资产后再发布，避免工作流抢跑。
 - 不要在 git 中提交任何 `.apk`；它们只属于 Release 资产与 Pages artifact。
+- **环境策略**：`Settings → Environments → github-pages` 需要允许 `main` 分支与 `v*` tag 部署；
+  否则 release 事件触发的 workflow 会 sync 成功、但 deploy job 在环境规则处立即失败（0 个步骤）。
+  当前已配置 `main`、`gh-pages`、`v*`（tag）三条策略。
 
 ## 说明
 
