@@ -125,6 +125,9 @@ jobs:
           path: docs
 
   deploy:
+    # deploy-pages 使用本次 run 的 commit SHA 作为 pages build version。
+    # 若同一个 SHA 已经部署过（例如先手动 dispatch 过 main，再在同一提交打 tag 发版），
+    # GitHub 可能忽略这次部署；此时再触发一次 workflow_dispatch 即可刷新（发布脚本已自动处理）。
     needs: sync
     runs-on: ubuntu-latest
     environment:
