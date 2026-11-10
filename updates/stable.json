@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "channel": "stable",
-  "version_name": "1.2.1a7",
-  "version_code": 9,
-  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=9",
-  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1a7/ZhiJi-v1.2.1a7-original-signed.apk",
-  "sha256": "7f79e5cfa69391df8a3e4336607b019e56e9c8fe8ac935826760e097505429de",
+  "version_name": "1.2.1a8",
+  "version_code": 10,
+  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=10",
+  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1a8/ZhiJi-v1.2.1a8-original-signed.apk",
+  "sha256": "4d0b43ba5a0f51b157f19ff58db13e7febd334dedadb9a4762563c2ff7e73e1c",
   "signer_sha256": "32d3c3d60d76519669941cda0878a560e65d61453f4f59164eaceda30d93015e",
-  "source_commit": "bf28b0ed959c8e2ee7ef2573537c058b81de6af3",
-  "notes": "## 织记 v1.2.1a7\n\n本版新增「外观工作室」与可拖拽底部导航。\n\n### 本版内容\n- **外观工作室**：设置 → 外观，集中配色预设/三色自定义、字体、背景与卡片纹理、磨砂与透明度；预览使用真实 Token 与公共组件，改动即时生效。\n- **三色自定义**：只暴露主色/辅助色/点缀色，其余层级颜色自动推导；预设与自定义互不覆盖。\n- **可拖拽底部导航**：底栏可直接拖动跟手，松手提交一次；中央新增按钮起手不接管拖动，点击/Tab 选中语义保留。\n- 动效继续统一 BukuMotion，减少动态效果（系统 0×）即时到终点；未改业务数据与备份格式。\n- 版本 1.2.1a7 / versionCode 9（高于 a6 的 8，可在线升级）。\n\n### 验证\n- 343 项 JVM 测试全绿（新增 AppearanceColorTest、NavigationDragPolicyTest 等）。\n- Debug/Release 原签名；动效/UI 静态检查通过。\n- 外观实际观感、底栏拖拽手感与性能仍建议真机确认。\n\n### 安装\n- 覆盖安装保留全部数据；升级前建议先在 App 内做完整备份。\n- 包名 `com.buku.fabric`，支持 Android 8.0+。",
-  "published_at": "2026-11-10T06:58:42Z"
+  "source_commit": "a8bab7f3c9637297fc59bfd86721c1a4ac46fcfa",
+  "notes": "## 织记 v1.2.1a8\n\n本版修复「更新下载取消后仍在继续下载 / 两条进度反复跳闪」的问题。\n\n### 本版内容\n- **可取消下载**：点「取消」会立即断开连接并删除半成品，不再在后台继续下载。\n- **修复两路进度跳闪**：下载增加代次控制，取消或重新下载后旧任务的进度回调全部作废；再点下载从 0 开始，不会和旧任务同时跑。\n- 防止连点/取消后立刻重下叠出第二个下载任务；离开更新页自动取消下载。\n- 单地址超时仍会自动换源重试；校验通过后改成稳定文件名。\n- 版本 1.2.1a8 / versionCode 10（高于 a7 的 9，可在线升级）。\n\n### 验证\n- 343 项 JVM 测试全绿；Debug/Release 原签名；动效/UI 静态检查通过。\n- 更新下载改为阻塞读可中断：取消时用看门狗子协程断开 socket，真机取消/重下行为仍建议升级后实测。\n\n### 安装\n- 覆盖安装保留全部数据；升级前建议先在 App 内做完整备份。\n- 包名 `com.buku.fabric`，支持 Android 8.0+。",
+  "published_at": "2026-11-10T07:35:43Z"
 }
