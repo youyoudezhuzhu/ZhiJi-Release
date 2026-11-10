@@ -21,36 +21,38 @@ pre{white-space:pre-wrap;color:#6f6a61;font-size:13px;margin:0}
 <h1>织记 · 自然</h1>
 <p>本地优先的手作记录应用 · Android 8.0+</p>
 <div class="card">
-<p><strong>最新版本 1.2.1a4（versionCode 6）</strong></p>
-<a class="btn" href="dl/latest.apk">下载最新 APK（76.9 MB）</a>
+<p><strong>最新版本 1.2.1a5（versionCode 7）</strong></p>
+<a class="btn" href="dl/latest.apk">下载最新 APK（77.0 MB）</a>
 <p>下载后请覆盖安装，数据会保留；升级前建议先在 App 内做完整备份。</p>
 </div>
 <div class="card">
-<p>SHA-256：<code>1774f88e40e664619d03c6e36e2f2310ad7a5877004f3a795d8169c62f748379</code></p>
+<p>SHA-256：<code>13a16b5590c65000b2ce95b161a77e2f6dddc9b3eeed76f2653010a946aedfdb</code></p>
 <p>签名证书：<code>32d3c3d60d76519669941cda0878a560e65d61453f4f59164eaceda30d93015e</code></p>
-<p>构建提交：<code>79505195dd628d4f49e56a6cb4083f2201ae34c0</code></p>
-<p>发布时间：2026-11-09T14:47:09Z</p>
+<p>构建提交：<code>3767375d606b09a642e8759d997f9fe6b9ff27e2</code></p>
+<p>发布时间：2026-11-10T02:03:26Z</p>
 </div>
 <div class="card">
 <p><strong>更新说明</strong></p>
-<pre>## 织记 v1.2.1a4
+<pre>## 织记 v1.2.1a5
 
-首个通过 GitHub Pages 在线更新的正式版本。
+修复「截图识别导入」在淘宝订单页识别不出/识别不全的问题。
 
 ### 本版内容
-- **在线更新**：设置 → 检查更新。更新清单优先从 GitHub Pages 读取（raw 作为兜底并行竞速），只比较 versionCode。
-- 下载优先走 Pages 直链（实测约 8 MB/s）；失败才回退 Release 镜像。下载后校验 SHA-256、包名、版本号与 APK 签名，通过后才交给系统安装器。
-- 弱网优化：清单超时 5s/整体 8s；下载连接停滞 20s 自动换源；下载界面显示实时速度、大小与来源。
-- 版本 1.2.1a4 / versionCode 6。
+- **截图导入重写**：适配新版淘宝「标题 + 价格合并同一行」的排版，改为任意含 ¥ 的行即视为一个商品；同一截图可正确识别 7 项商品。
+- 名称取规格行颜色名并纠正常见 OCR 错字（藏青/水青色/干枯玫瑰/樱桃红等）；幅宽丢小数点自动修复（14米→1.4米、142米→1.42米）。
+- 只从规格行取长度和幅宽，不再把「满29.9包邮」等营销数字当尺寸；图片上的装饰字不再被当作标题。
+- 店铺按「…的店」最近一行识别，自动清理 @、> 等噪声。
+- 顺手修复更新检查的 Pages 缓存问题：清单请求带时间戳、多个源取版本号最新、发布脚本等待 Pages 就绪后才算完成。
+- 版本 1.2.1a5 / versionCode 7。
 
 ### 验证
-- JVM 327 项全部通过（含 UpdateTest 10 项）。
+- JVM 328 项全部通过（含真实 OCR 行回归）。
+- 三星 SM-F731U 真机导入用户提供的淘宝截图：识别 7 项，店铺、名称、长度、幅宽、价格逐项核对通过。
 - Debug/Release 均原签名（证书 SHA-256 `32d3c3d6…`）。
-- 真机验证：a3 老版本可检测到本版本并完成下载、SHA-256 与签名校验。
 
 ### 安装
 - 覆盖安装保留全部数据；升级前建议先在 App 内做完整备份。
-- 包名 `com.buku.fabric`，仅支持 Android 8.0+。</pre>
+- 包名 `com.buku.fabric`，支持 Android 8.0+。</pre>
 </div>
 <p class="foot">更新清单：<a href="dl/stable.json">dl/stable.json</a> · 历史版本见 <a href="https://github.com/youyoudezhuzhu/ZhiJi-Release/releases">GitHub Releases</a></p>
 <p class="foot">所有文件通过 HTTPS 分发；App 下载后会校验 SHA-256 与 APK 签名。</p>

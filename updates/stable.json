@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "channel": "stable",
-  "version_name": "1.2.1a4",
-  "version_code": 6,
-  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=6",
-  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1a4/ZhiJi-v1.2.1a4-original-signed.apk",
-  "sha256": "1774f88e40e664619d03c6e36e2f2310ad7a5877004f3a795d8169c62f748379",
+  "version_name": "1.2.1a5",
+  "version_code": 7,
+  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=7",
+  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1a5/ZhiJi-v1.2.1a5-original-signed.apk",
+  "sha256": "13a16b5590c65000b2ce95b161a77e2f6dddc9b3eeed76f2653010a946aedfdb",
   "signer_sha256": "32d3c3d60d76519669941cda0878a560e65d61453f4f59164eaceda30d93015e",
-  "source_commit": "79505195dd628d4f49e56a6cb4083f2201ae34c0",
-  "notes": "## 织记 v1.2.1a4\n\n首个通过 GitHub Pages 在线更新的正式版本。\n\n### 本版内容\n- **在线更新**：设置 → 检查更新。更新清单优先从 GitHub Pages 读取（raw 作为兜底并行竞速），只比较 versionCode。\n- 下载优先走 Pages 直链（实测约 8 MB/s）；失败才回退 Release 镜像。下载后校验 SHA-256、包名、版本号与 APK 签名，通过后才交给系统安装器。\n- 弱网优化：清单超时 5s/整体 8s；下载连接停滞 20s 自动换源；下载界面显示实时速度、大小与来源。\n- 版本 1.2.1a4 / versionCode 6。\n\n### 验证\n- JVM 327 项全部通过（含 UpdateTest 10 项）。\n- Debug/Release 均原签名（证书 SHA-256 `32d3c3d6…`）。\n- 真机验证：a3 老版本可检测到本版本并完成下载、SHA-256 与签名校验。\n\n### 安装\n- 覆盖安装保留全部数据；升级前建议先在 App 内做完整备份。\n- 包名 `com.buku.fabric`，仅支持 Android 8.0+。",
-  "published_at": "2026-11-09T14:47:09Z"
+  "source_commit": "3767375d606b09a642e8759d997f9fe6b9ff27e2",
+  "notes": "## 织记 v1.2.1a5\n\n修复「截图识别导入」在淘宝订单页识别不出/识别不全的问题。\n\n### 本版内容\n- **截图导入重写**：适配新版淘宝「标题 + 价格合并同一行」的排版，改为任意含 ¥ 的行即视为一个商品；同一截图可正确识别 7 项商品。\n- 名称取规格行颜色名并纠正常见 OCR 错字（藏青/水青色/干枯玫瑰/樱桃红等）；幅宽丢小数点自动修复（14米→1.4米、142米→1.42米）。\n- 只从规格行取长度和幅宽，不再把「满29.9包邮」等营销数字当尺寸；图片上的装饰字不再被当作标题。\n- 店铺按「…的店」最近一行识别，自动清理 @、> 等噪声。\n- 顺手修复更新检查的 Pages 缓存问题：清单请求带时间戳、多个源取版本号最新、发布脚本等待 Pages 就绪后才算完成。\n- 版本 1.2.1a5 / versionCode 7。\n\n### 验证\n- JVM 328 项全部通过（含真实 OCR 行回归）。\n- 三星 SM-F731U 真机导入用户提供的淘宝截图：识别 7 项，店铺、名称、长度、幅宽、价格逐项核对通过。\n- Debug/Release 均原签名（证书 SHA-256 `32d3c3d6…`）。\n\n### 安装\n- 覆盖安装保留全部数据；升级前建议先在 App 内做完整备份。\n- 包名 `com.buku.fabric`，支持 Android 8.0+。",
+  "published_at": "2026-11-10T02:03:26Z"
 }
