@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "channel": "stable",
-  "version_name": "1.2.1a9",
-  "version_code": 11,
-  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=11",
-  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1a9/ZhiJi-v1.2.1a9-original-signed.apk",
-  "sha256": "1f31703d34a1b33f949c895e0f594336091348c799fb3b6881b36adecd037bbd",
+  "version_name": "1.2.1a10",
+  "version_code": 12,
+  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=12",
+  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1a10/ZhiJi-v1.2.1a10-original-signed.apk",
+  "sha256": "b3b34c95bda69ebdd96b0a9935624e4d378e827a1bdfe8cc071655ec019ff419",
   "signer_sha256": "32d3c3d60d76519669941cda0878a560e65d61453f4f59164eaceda30d93015e",
-  "source_commit": "b79cd196123b962b70946f4d7839fda8f22a9d6a",
-  "notes": "## 织记 v1.2.1a9\n\n本版主要做体积瘦身，并修复更新时间显示时区问题。\n\n### 安装包体积：80.8MB → 28.0MB（约 -65%）\n- 移除只给模拟器用的 x86/x86_64 OCR 原生库（真机全是 ARM），约省 23MB。\n- 内置思源宋体改为子集（GB2312 6763 字 + 全部界面用字 + 常用符号），24.5MB → 4.7MB；生僻字回退系统字体。\n- 开启 R8 代码压缩与资源压缩，剥离未使用的图标/代码；清理重复启动图与旧密度图标。\n- 更新下载、安装校验、签名与数据格式均不变；在线更新包更小更快。\n\n### 修复\n- 更新页「发布时间」之前直接显示 UTC，比北京时间慢 8 小时；现在按设备本地时区显示（如北京时间）。\n- 顺带排查了全项目时间显示：创建/更新/使用/备份/反馈时间均按本地时区，未发现其它时区错位。\n\n### 版本\n- 1.2.1a9 / versionCode 11（高于 a8 的 10，可在线升级）。\n\n### 验证\n- 345 项 JVM 全绿；Debug/Release 原签名。\n- 发布包已做真机冒烟（启动、手作库、字体、截图识别、更新检查）。\n\n### 安装\n- 覆盖安装保留全部数据；升级前建议先在 App 内做完整备份。\n- 包名 `com.buku.fabric`，支持 Android 8.0+；不再支持 x86 模拟器安装。",
-  "published_at": "2026-11-10T09:17:11Z"
+  "source_commit": "1134d279d26d4cde288914631cbc8ec59cc59299",
+  "notes": "## 织记 v1.2.1a10\n\n编辑页与详情页转场统一，另含上一版体积瘦身后的体验延续。\n\n### 本版内容\n- **编辑页/详情页统一横向转场**：所有编辑页、详情页从右向左进入、向右退出，不再按编辑类型使用底部上升，返回方向与进入一致。\n- 更新下载、安装校验、数据格式与备份协议不变。\n- 版本 1.2.1a10 / versionCode 12（高于 a9 的 11，可在线升级）。\n\n### 验证\n- 345 项 JVM 测试全绿；Debug/Release 原签名。\n- 真机可测试：从手作库进入新增/编辑、作品编辑、DIY/拼图等页面，检查进入/返回动画方向一致。\n\n### 安装\n- 覆盖安装保留全部数据；升级前建议先在 App 内做完整备份。\n- 包名 `com.buku.fabric`，支持 Android 8.0+。",
+  "published_at": "2026-11-10T10:47:26Z"
 }
