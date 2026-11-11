@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "channel": "stable",
-  "version_name": "1.2.1a13",
-  "version_code": 15,
-  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=15",
-  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1a13/ZhiJi-v1.2.1a13-original-signed.apk",
-  "sha256": "181f4d8c7a0aa58fcbea626f063249e9e2b7e688775bd3d2fa39a119ce7756da",
+  "version_name": "1.2.1a14",
+  "version_code": 16,
+  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=16",
+  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1a14/ZhiJi-v1.2.1a14-original-signed.apk",
+  "sha256": "ce800066f677c824393cb26944995a63c81a53de6fa1642f7901a4af2f7bd44b",
   "signer_sha256": "32d3c3d60d76519669941cda0878a560e65d61453f4f59164eaceda30d93015e",
-  "source_commit": "3d123ba10cdce01f305961cec9acb9cd3c46f99c",
-  "notes": "## 织记 v1.2.1a13\n\n物料选择器文件夹动效统一、文件夹封面边缘闪动修复，另含缩略图缓存优化。\n\n### 本版内容\n- **选料文件夹更顺滑**：物料选择器的文件夹展开/收起与手作库一致，按已显现子项逐行改变真实高度和间距，保持懒加载；周边卡片连续让位，不再跳变。\n- **封面边缘闪动修复**：文件夹封面底板不再缩小到裁切框以内，图标与底板分层缩放，展开过程不再出现边缘闪动。\n- **缩略图缓存**：按文件版本键、带字节上限的内存缓存，减少文件夹动效重绘时的图片解码抖动；不手动回收仍被界面引用的图片。\n- **上一版全部内容**：纸样使用/复用（使用扣 1 份、复用不扣库存）、材料清单纸样自动复用、物料选择器文件夹分组、记录菜单独立配色、浮层菜单圆角修复、使用记录「米 · 平米」双单位显示、安装权限胶囊按钮、编辑页横向转场。\n\n### 验证\n- 350 项 JVM 测试全绿；Debug/Release 原签名。\n- 版本 1.2.1a13 / versionCode 15（高于 a12 的 14，可在线升级）。\n\n### 安装\n- 覆盖安装保留全部数据；升级前建议先在 App 内做完整备份。\n- 包名 `com.buku.fabric`，支持 Android 8.0+。",
-  "published_at": "2026-11-11T02:10:11Z"
+  "source_commit": "e7080bd2f5d987abebc23a31d1c392a85bebbcc2",
+  "notes": "## 织记 v1.2.1a14\n\n使用记录行高与详情排版修正。\n\n### 本版内容\n- **纸样使用行等高**：纸样「使用/复用」胶囊收紧内边距和高度，纸样行与布料行高度一致，不再把记录行撑高。\n- **详情排版**：使用记录详情改为上下两行，物料名称与用量分层显示；长物料名不再被右侧用量挤压截断。\n- **上一版全部内容**：选料文件夹显现统一、封面边缘闪动修复、缩略图缓存、纸样使用/复用（使用扣 1 份、复用不扣库存）、材料清单纸样自动复用、物料选择器文件夹分组、记录菜单独立配色、浮层菜单圆角修复、使用记录「米 · 平米」双单位显示、安装权限胶囊按钮、编辑页横向转场。\n\n### 验证\n- 350 项 JVM 测试全绿；Debug/Release 原签名。\n- 版本 1.2.1a14 / versionCode 16（高于 a13 的 15，可在线升级）。\n\n### 安装\n- 覆盖安装保留全部数据；升级前建议先在 App 内做完整备份。\n- 包名 `com.buku.fabric`，支持 Android 8.0+。",
+  "published_at": "2026-11-11T06:29:15Z"
 }
