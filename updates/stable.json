@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "channel": "stable",
-  "version_name": "1.2.1a12",
-  "version_code": 14,
-  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=14",
-  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1a12/ZhiJi-v1.2.1a12-original-signed.apk",
-  "sha256": "579fbf4821b995fee4e1f90cb84b0835e3cc37d9fa7d4f09cdca3800bf1c5b09",
+  "version_name": "1.2.1a13",
+  "version_code": 15,
+  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=15",
+  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1a13/ZhiJi-v1.2.1a13-original-signed.apk",
+  "sha256": "181f4d8c7a0aa58fcbea626f063249e9e2b7e688775bd3d2fa39a119ce7756da",
   "signer_sha256": "32d3c3d60d76519669941cda0878a560e65d61453f4f59164eaceda30d93015e",
-  "source_commit": "81c01abf4e227ef95d0b02191d030f60869bb2ab",
-  "notes": "## 织记 v1.2.1a12\n\n文件夹展开/收起时的周边卡片让位动画修正，含上一版纸样使用/复用等全部内容。\n\n### 本版内容\n- **文件夹展开更顺滑**：手作库和物料选择器中，文件夹展开/收起时，文件夹外的后续卡片按同一进度连续让位，不再出现内部内容已展开、外部卡片瞬间被撑开的跳变；收起同样连续回收，不叠加第二套高度弹簧。\n- **上一版全部内容**：纸样使用/复用（使用扣 1 份、复用不扣库存、显示「使用/复用」）、材料清单纸样自动复用、物料选择器文件夹分组、加号菜单独立配色、浮层菜单圆角/阴影修复、使用记录「米 · 平米」双单位显示、安装权限胶囊按钮、编辑页横向转场。\n- 本版修复了上游文件夹动画改动在物料选择器里的一处编译问题。\n\n### 验证\n- 350 项 JVM 测试全绿；Debug/Release 原签名。\n- 版本 1.2.1a12 / versionCode 14（高于 a11 的 13，可在线升级）。\n\n### 安装\n- 覆盖安装保留全部数据；升级前建议先在 App 内做完整备份。\n- 包名 `com.buku.fabric`，支持 Android 8.0+。",
-  "published_at": "2026-11-10T15:13:51Z"
+  "source_commit": "3d123ba10cdce01f305961cec9acb9cd3c46f99c",
+  "notes": "## 织记 v1.2.1a13\n\n物料选择器文件夹动效统一、文件夹封面边缘闪动修复，另含缩略图缓存优化。\n\n### 本版内容\n- **选料文件夹更顺滑**：物料选择器的文件夹展开/收起与手作库一致，按已显现子项逐行改变真实高度和间距，保持懒加载；周边卡片连续让位，不再跳变。\n- **封面边缘闪动修复**：文件夹封面底板不再缩小到裁切框以内，图标与底板分层缩放，展开过程不再出现边缘闪动。\n- **缩略图缓存**：按文件版本键、带字节上限的内存缓存，减少文件夹动效重绘时的图片解码抖动；不手动回收仍被界面引用的图片。\n- **上一版全部内容**：纸样使用/复用（使用扣 1 份、复用不扣库存）、材料清单纸样自动复用、物料选择器文件夹分组、记录菜单独立配色、浮层菜单圆角修复、使用记录「米 · 平米」双单位显示、安装权限胶囊按钮、编辑页横向转场。\n\n### 验证\n- 350 项 JVM 测试全绿；Debug/Release 原签名。\n- 版本 1.2.1a13 / versionCode 15（高于 a12 的 14，可在线升级）。\n\n### 安装\n- 覆盖安装保留全部数据；升级前建议先在 App 内做完整备份。\n- 包名 `com.buku.fabric`，支持 Android 8.0+。",
+  "published_at": "2026-11-11T02:10:11Z"
 }
