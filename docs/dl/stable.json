@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "channel": "stable",
-  "version_name": "1.2.1a15",
-  "version_code": 17,
-  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=17",
-  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1a15/ZhiJi-v1.2.1a15-original-signed.apk",
-  "sha256": "9b42cf5e1f81113ee64cdc23c5945f8633e79d7703be36220e17aa94030785c9",
+  "version_name": "1.2.1a16",
+  "version_code": 18,
+  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=18",
+  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1a16/ZhiJi-v1.2.1a16-original-signed.apk",
+  "sha256": "82c141651dc7f633785a43364eb154c6b7215c3de49045566119501c8c851867",
   "signer_sha256": "32d3c3d60d76519669941cda0878a560e65d61453f4f59164eaceda30d93015e",
-  "source_commit": "fe0d61c8de9b92ffb6570e78de7e4bb8c60bc8c6",
-  "notes": "## 织记 v1.2.1a15\n\n拼布编辑流程精简、自然外观与动效生命周期统一。\n\n### 本版内容\n- **拼布编辑更顺手**：列表改用后台生成的小封面并缓存，不再每张卡片实时重绘完整布纹；编辑器底部工具区按选择状态切换（未选中添加/图层/方案，选中换布/调整/层级/更多），撤销/重做/保存保持可达；保留原草稿与返回保护。\n- **自然外观**：标准内容卡片统一使用真实卡片表面（底色+细边界），页面保持浅暖底色并校正文字对比；外观预览改用真实组件，自定义颜色编辑时预览留在滚动区外，短窗口显示三色样例。\n- **动效生命周期统一**：按压、Sheet 进出、文件夹展开的动画与交互状态对齐——Sheet 选择即时提交、异步保存成功再关闭、失败保留表单；动画中的浮层停稳后才恢复实时磨砂；局部颜色切换避免重复插值。\n- **上一版全部内容**：使用记录详情上下排版、纸样使用行等高、选料文件夹显现统一、封面边缘闪动修复、缩略图缓存、纸样使用/复用、材料清单纸样复用、使用记录双单位显示、安装权限胶囊按钮、编辑页横向转场。\n\n### 验证\n- 352 项 JVM 测试全绿；Debug/Release 原签名；UI/动效/拼布模板静态检查通过。\n- 版本 1.2.1a15 / versionCode 17（高于 a14 的 16，可在线升级）。\n\n### 安装\n- 覆盖安装保留全部数据；升级前建议先在 App 内做完整备份。\n- 包名 `com.buku.fabric`，支持 Android 8.0+。",
-  "published_at": "2026-11-11T09:15:25Z"
+  "source_commit": "cead5936eb01820f1b16cb23aac5223588980517",
+  "notes": "## 织记 v1.2.1a16\n\n物料文件夹连接线修复，桌面图标恢复为分层自适应版本。\n\n### 本版内容\n- **文件夹连接线**：手作库和物料选择器的文件夹子项连线改为跨整段间距连续绘制，展开/收起过程中不再断线，首尾才裁切；两类页面共用同一实现。\n- **新桌面图标**：恢复「透明主体 + 纯色背景 #E9DCC4」的分层自适应图标，不烘焙白边、圆角或阴影；Android 13 单色主题图标与彩色前景共用轮廓；系统启动页复用自适应图标和背景色，不额外加假开屏或延时。\n- **上一版全部内容**：拼布编辑流程与目录预览缓存、自然材质与紧凑外观预览、按压/Sheet/文件夹动效生命周期、使用记录详情排版、纸样使用/复用、材料清单纸样复用、选料文件夹显现、缩略图缓存、使用记录双单位显示、安装权限胶囊按钮、编辑页横向转场。\n\n### 验证\n- 352 项 JVM 测试全绿；Debug/Release 原签名；UI/动效/拼布模板检查通过；图标像素、背景、安全圆、单色剪影、资源 XML 与启动页配置通过只读校验（ImageMagick 缺失，使用等价 PIL 校验）。\n- 版本 1.2.1a16 / versionCode 18（高于 a15 的 17，可在线升级）。\n\n### 安装\n- 覆盖安装保留全部数据；升级前建议先在 App 内做完整备份。\n- 包名 `com.buku.fabric`，支持 Android 8.0+。",
+  "published_at": "2026-11-13T04:17:02Z"
 }
