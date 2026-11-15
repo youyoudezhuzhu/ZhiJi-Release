@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "channel": "stable",
-  "version_name": "1.2.1a18",
-  "version_code": 20,
-  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=20",
-  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1a18/ZhiJi-v1.2.1a18-original-signed.apk",
-  "sha256": "4f82d7a8acb7084aa4599c9c4c0159c5bc46a3176095a8c0e9e2f655976cedb1",
+  "version_name": "1.2.1a19",
+  "version_code": 21,
+  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=21",
+  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1a19/ZhiJi-v1.2.1a19-original-signed.apk",
+  "sha256": "0b0fb00f7fc363a1e0952b0086bb93c3d0ee16d7978b5666616090500386d661",
   "signer_sha256": "32d3c3d60d76519669941cda0878a560e65d61453f4f59164eaceda30d93015e",
-  "source_commit": "1d5bee5528e6d60b65862c5013547296af6c08b3",
-  "notes": "本次更新（2026-11-15）\n\n- 编辑页面及图片裁剪页统一在右上角直接保存，移除应用内撤销/重做入口。\n- 物料相册支持一次选择多张图片，依次裁剪；中途返回保留已完成图片。\n- 支持从已关联作品的使用记录更新整份材料清单，所有布料与物品用量均按本次制作数量换算，纸样沿用使用/复用规则。\n- 更新材料清单后，同步该作品已有快捷复记中的全部材料用量、库存差额和成本；保留每次制作数量、时间、备注与历史单价，自由记录保持独立。\n- 累计库存不足时阻止整次清单更新，避免只更新部分记录。\n- 包含此前本地修正：拼布手机操作与用布来源、磨砂材质一致性、截图导入识别补充、裁剪手势、保存与导航保护。\n\n保持原签名，可覆盖升级。",
-  "published_at": "2026-11-15T15:36:20Z"
+  "source_commit": "8728ff51de3ce53f61c4bfa25682d8d46cb9cac7",
+  "notes": "## 织记 v1.2.1a19\n\n全局透明材质与按钮样式统一。\n\n### 本版内容\n- **透明材质统一**：普通浅色卡片、搜索框、胶囊和菜单共用同一材质色量与全局透明度；透明质感以底部悬浮导航为基准，共用统一的玻璃材质参数与模糊半径。弹出菜单和底栏采样真实页面，普通卡片只采样独立背景，浮层内按钮不再重复模糊。\n- **按钮/操作统一**：新增独立文字操作组件；标准图标操作、文字胶囊、筛选胶囊、二选一开关分别统一到公共组件，业务页不再各写一套无按压按钮。整行入口统一共用按压动效，主操作、未选中、危险、禁用保留各自语义。\n- **胶囊配色统一**：普通未选中操作/筛选使用统一浅底，选中与主操作使用主题强调色；危险操作保留错误色；不再把输入框底色或浅强调色当普通胶囊。\n- **上一版全部内容**：拼布用布来源与手机手柄、磨砂浮层连续性、文件夹连线、分层自适应图标、使用记录详情/行高、纸样使用/复用、选料文件夹、缩略图缓存、双单位显示、安装权限胶囊、编辑页横向转场等。\n\n### 验证\n- 376 项 JVM 测试全绿；Debug/Release 原签名；UI/动效/拼布模板静态检查通过。\n- 版本 1.2.1a19 / versionCode 21（高于 a18 的 20，可在线升级）。\n\n### 安装\n- 覆盖安装保留全部数据；升级前建议先在 App 内做完整备份。\n- 包名 `com.buku.fabric`，支持 Android 8.0+。",
+  "published_at": "2026-11-15T23:43:25Z"
 }
