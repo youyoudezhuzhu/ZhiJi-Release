@@ -73,15 +73,18 @@ APK 只存在于 Release 资产和 Pages artifact 中；`docs/dl/latest.apk` 被
 
 - `version_name`、`version_code` 必须与 APK 内一致；
 - `sha256` 必须与上传的 APK 字节一致；
-- `notes` 与 Release 正文保持一致，便于更新器展示；
+- `notes` 与 Release 正文保持一致，便于更新器展示；它是 JSON 字符串，换行需要转义（`\n`），建议用脚本生成而不是手写；
 - 不要放内部链接、私有仓库地址、构建机路径或用户信息。
 
 生成校验文件：
 
 ```bash
-sha256sum <apk> > SHA256SUMS-<version_name>.txt
-# 文件内容形如：<sha256>  <apk 文件名>
+# 先进入 APK 所在目录，保证校验文件里写的是资产文件名
+sha256sum "ZhiJi-v<version_name>-original-signed.apk" > "SHA256SUMS-<version_name>.txt"
+# 文件内容形如：<sha256>  ZhiJi-v<version_name>-original-signed.apk
 ```
+
+一次 Release 只放一个匹配 `ZhiJi-v*-original-signed.apk` 的 APK；工作流只取匹配到的第一个。
 
 读取签名证书 SHA-256：
 
