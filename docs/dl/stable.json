@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "channel": "stable",
-  "version_name": "1.2.1a17",
-  "version_code": 19,
-  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=19",
-  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1a17/ZhiJi-v1.2.1a17-original-signed.apk",
-  "sha256": "1c4b1b11b05e2f90a18261699e229efb0e3b1c58df8a2986fff90cd9fc1e06fc",
+  "version_name": "1.2.1a18",
+  "version_code": 20,
+  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=20",
+  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1a18/ZhiJi-v1.2.1a18-original-signed.apk",
+  "sha256": "4f82d7a8acb7084aa4599c9c4c0159c5bc46a3176095a8c0e9e2f655976cedb1",
   "signer_sha256": "32d3c3d60d76519669941cda0878a560e65d61453f4f59164eaceda30d93015e",
-  "source_commit": "ce6726eea398530d8ee256dbd1f22ce7314c448d",
-  "notes": "## 织记 v1.2.1a17\n\n拼布用布来源、手机手柄与磨砂连续性修正。\n\n### 本版内容\n- **拼布模板用布来源**：模板明确绑定共享 DIY 预设，可查看并放大原规格；不会再静默换成第一种花色，也不会改写你的 DIY 编辑草稿。保存方案不会自动换布。\n- **裁片手柄**：只在选中裁片时显示；可见手柄优先响应，扩大触控热区不抢裁片正文，屏幕边缘仍保留完整触控目标；拖动从按下时尺寸和位置开始，不会第一次移动就跳一下。\n- **底部工具区**：高度稳定，选中/取消不会让画布坐标变化；位置和布纹在调整面板，操作从「更多」进入；纯装饰项显示颜色；其他方案工具可收起，入口仍保留。\n- **磨砂连续性**：浮层移动时不再临时关闭磨砂或切换透明度；开启磨砂后，移动与静止保持同一材质。\n- **上一版全部内容**：文件夹连接线、新分层自适应图标、拼布编辑与目录预览缓存、自然材质、动效生命周期、使用记录详情/行高、纸样使用/复用、选料文件夹、缩略图缓存、双单位显示、安装权限胶囊按钮、编辑页横向转场。\n\n### 验证\n- 354 项 JVM 测试全绿；Debug/Release 原签名；UI/动效/拼布模板检查通过。\n- 版本 1.2.1a17 / versionCode 19（高于 a16 的 18，可在线升级）。\n\n### 安装\n- 覆盖安装保留全部数据；升级前建议先在 App 内做完整备份。\n- 包名 `com.buku.fabric`，支持 Android 8.0+。",
-  "published_at": "2026-11-15T01:46:51Z"
+  "source_commit": "1d5bee5528e6d60b65862c5013547296af6c08b3",
+  "notes": "本次更新（2026-11-15）\n\n- 编辑页面及图片裁剪页统一在右上角直接保存，移除应用内撤销/重做入口。\n- 物料相册支持一次选择多张图片，依次裁剪；中途返回保留已完成图片。\n- 支持从已关联作品的使用记录更新整份材料清单，所有布料与物品用量均按本次制作数量换算，纸样沿用使用/复用规则。\n- 更新材料清单后，同步该作品已有快捷复记中的全部材料用量、库存差额和成本；保留每次制作数量、时间、备注与历史单价，自由记录保持独立。\n- 累计库存不足时阻止整次清单更新，避免只更新部分记录。\n- 包含此前本地修正：拼布手机操作与用布来源、磨砂材质一致性、截图导入识别补充、裁剪手势、保存与导航保护。\n\n保持原签名，可覆盖升级。",
+  "published_at": "2026-11-15T15:36:20Z"
 }
