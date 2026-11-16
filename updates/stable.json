@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "channel": "stable",
-  "version_name": "1.2.1b1",
-  "version_code": 23,
-  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=23",
-  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1b1/ZhiJi-v1.2.1b1-original-signed.apk",
-  "sha256": "fade9b0bae81fd468f240b54152b2b958a24ea74fa0c4c8c1c7f29b86b05174a",
+  "version_name": "1.2.1b2",
+  "version_code": 24,
+  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=24",
+  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1b2/ZhiJi-v1.2.1b2-original-signed.apk",
+  "sha256": "cca0c371051591f06cffc0fc74711eed30547a7b3d581cf86c8d423377343847",
   "signer_sha256": "32d3c3d60d76519669941cda0878a560e65d61453f4f59164eaceda30d93015e",
-  "source_commit": "64a00773a1400804d2df49783e180c5cfbaafbaf",
-  "notes": "## 织记 v1.2.1b1\n\n本次更新：\n\n- 首页底部新增面板收窄，选项与面板边缘留出更舒服的间距，面板整体更靠近加号。\n- 底部悬浮导航的选中背景恢复为浅绿色，磨砂开关前后保持一致；选中图标与浅绿背景居中对齐，最外侧圆角与导航外弧同心。\n- 首页右上角排序/设置、详情页返回与三点菜单等圆形图标按钮改为暖米色，和整体风格统一。\n- 汇总“入库统计”移除多余的“全部价格 / 未填有效价格”和份数行；汇总“使用记录”的排序改为右上角排序菜单。\n- 作品材料清单页左上角改为统一返回箭头。\n- 下拉菜单、详情三点菜单、新增面板统一使用底部悬浮导航的玻璃材质，不再出现透明度不一致。\n- 全部确认弹窗统一按钮：取消/放弃在左红底白字，保存/更新/确定在右强调色底白字。\n- 详情备注输入框改为整宽居中，不再重复显示“备注”标签；在输入框外滑动页面会自动退出输入状态并收起键盘。\n- 图片识别批量核对逐条详情：第一项左上角显示“返回”，可回到核对结果页修改识别内容；最后一项仍为“保存”。\n- “更新材料清单”确认弹窗文案精简，并改为清晰的取消/更新胶囊。\n\n如遇问题，请通过应用内“问题反馈”提交。",
-  "published_at": "2026-11-16T05:24:00Z"
+  "source_commit": "57c71ecd3a16535bd832c3ea57e317ba4687bb52",
+  "notes": "## 织记 v1.2.1b2\n\n本次更新：\n\n- 新增面板恢复原来的外框宽度，只把面板内的五个记录卡片收窄，四周留白更舒服。\n- 底部导航选中态改为连续“负片”着色：浅绿底板移动到哪，图标和文字的绿色就覆盖到哪；快速点击或拖动时不再瞬间跳色。\n- 修复顶部收藏收纳：手指轻扫松手后，列表惯性上滑时搜索/筛选区域会继续跟随收纳，不再停住。\n- 胶囊按钮去掉实心主色/危险态上的细亮描边，保存、取消、更新等按钮的圆角边缘更干净。\n- 圆形图标展开的菜单收回时，阴影随形变同步淡出，不再出现黑边突然消失的一帧。\n- 上一版全部内容保留。\n\n如遇问题，请通过应用内“问题反馈”提交。",
+  "published_at": "2026-11-16T06:04:49Z"
 }
