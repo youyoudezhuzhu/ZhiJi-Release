@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "channel": "stable",
-  "version_name": "1.2.1a20",
-  "version_code": 22,
-  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=22",
-  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1a20/ZhiJi-v1.2.1a20-original-signed.apk",
-  "sha256": "694532d511c29ba10a5523f072472eb6ca7e42768692384010be8591f4054fe5",
+  "version_name": "1.2.1b1",
+  "version_code": 23,
+  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=23",
+  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1b1/ZhiJi-v1.2.1b1-original-signed.apk",
+  "sha256": "fade9b0bae81fd468f240b54152b2b958a24ea74fa0c4c8c1c7f29b86b05174a",
   "signer_sha256": "32d3c3d60d76519669941cda0878a560e65d61453f4f59164eaceda30d93015e",
-  "source_commit": "50f8e63edf662a19b7a0275e6664d1cf9cc31559",
-  "notes": "## 织记 v1.2.1a20\n\n本次更新：\n\n- 图片识别批量导入：核对页标题改为“核对结果”，每条布料可手动补充材质标签；逐条详情支持“上一个/下一个”切换，最后一项显示“保存”，标题显示“布料详情 x/y”，底部新增删除按钮，删除后进度同步变化。\n- 作品材料清单改为独立二级页面：左上返回、右上保存、底部删除材料清单；返回时若有未保存修改会提示确认。\n- 所有主要编辑页补齐“未保存就返回”确认，避免误触丢失填写内容。\n- 手作库、汇总、作品、灵感、DIY、拼布等页面的顶部区域支持随滚动收纳；汇总的入库统计和使用记录明细也支持搜索筛选与收纳。\n- 新增面板从加号位置展开，移除打开时的瞬间白框与导航上方灰黑遮罩；普通菜单和详情三点菜单统一为底部导航的玻璃材质。\n- 应用锁定竖屏，不再随手机旋转。\n\n如遇问题，请通过应用内“问题反馈”提交。",
-  "published_at": "2026-11-16T04:22:36Z"
+  "source_commit": "64a00773a1400804d2df49783e180c5cfbaafbaf",
+  "notes": "## 织记 v1.2.1b1\n\n本次更新：\n\n- 首页底部新增面板收窄，选项与面板边缘留出更舒服的间距，面板整体更靠近加号。\n- 底部悬浮导航的选中背景恢复为浅绿色，磨砂开关前后保持一致；选中图标与浅绿背景居中对齐，最外侧圆角与导航外弧同心。\n- 首页右上角排序/设置、详情页返回与三点菜单等圆形图标按钮改为暖米色，和整体风格统一。\n- 汇总“入库统计”移除多余的“全部价格 / 未填有效价格”和份数行；汇总“使用记录”的排序改为右上角排序菜单。\n- 作品材料清单页左上角改为统一返回箭头。\n- 下拉菜单、详情三点菜单、新增面板统一使用底部悬浮导航的玻璃材质，不再出现透明度不一致。\n- 全部确认弹窗统一按钮：取消/放弃在左红底白字，保存/更新/确定在右强调色底白字。\n- 详情备注输入框改为整宽居中，不再重复显示“备注”标签；在输入框外滑动页面会自动退出输入状态并收起键盘。\n- 图片识别批量核对逐条详情：第一项左上角显示“返回”，可回到核对结果页修改识别内容；最后一项仍为“保存”。\n- “更新材料清单”确认弹窗文案精简，并改为清晰的取消/更新胶囊。\n\n如遇问题，请通过应用内“问题反馈”提交。",
+  "published_at": "2026-11-16T05:24:00Z"
 }
