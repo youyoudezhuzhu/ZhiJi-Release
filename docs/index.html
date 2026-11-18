@@ -21,30 +21,23 @@ pre{white-space:pre-wrap;color:#6f6a61;font-size:13px;margin:0}
 <h1>织记 · 自然</h1>
 <p>本地优先的手作记录应用 · Android 8.0+</p>
 <div class="card">
-<p><strong>最新版本 1.2.1b6（versionCode 28）</strong></p>
-<a class="btn" href="dl/latest.apk">下载最新 APK（26.7 MB）</a>
+<p><strong>最新版本 1.2.1b7（versionCode 29）</strong></p>
+<a class="btn" href="dl/latest.apk">下载最新 APK（20.2 MB）</a>
 <p>下载后请覆盖安装，数据会保留；升级前建议先在 App 内做完整备份。</p>
 </div>
 <div class="card">
-<p>SHA-256：<code>86cc1847ce7079f3f18f7f33b2724dcbea4750d828d0e7f26e6494bf5fe5051f</code></p>
+<p>SHA-256：<code>f7f45c72f0bd13c97f785a2e51e3685a035f90e9ef621573ffda25b73b3d4f1f</code></p>
 <p>签名证书：<code>32d3c3d60d76519669941cda0878a560e65d61453f4f59164eaceda30d93015e</code></p>
-<p>构建提交：<code>393ad448c028743da04e31c636ba8b0f80bb2cbe</code></p>
-<p>发布时间：2026-11-16T16:46:57Z</p>
+<p>构建提交：<code></code></p>
+<p>发布时间：2026-11-18T11:14:51Z</p>
 </div>
 <div class="card">
 <p><strong>更新说明</strong></p>
-<pre>## 织记 v1.2.1b6
+<pre>本版适用于支持 ARM64（arm64-v8a）的 Android 设备。
 
-本次更新：
-
-- 修复“更新材料清单”时误报“米数最多保留两位小数”：例如 0.68 米 ÷ 3 件生成单件清单后，系统派生精度不再套用用户输入的两位小数限制。
-- 材料清单与快捷复记同步策略统一：手填精度和系统派生精度分开校验，整数单位、库存和单位规则不放宽。
-- 修复纸样在“使用记录 → 材料清单 → 历史快捷复记”同步中可能被静默改成复用、并错误退库的问题。
-- 更新清单后主动刷新当前快捷复记草稿，旧草稿保存前做版本校验，避免覆盖刚同步的数据。
-- 库存、使用记录、作品写入统一协调，增加事务恢复保护，避免并发保存互相覆盖。
-- 上一版裁剪页长按角度拨盘、导航同心圆、惯性、玻璃/非玻璃材质、圆形菜单底色等全部保留。
-
-如遇问题，请通过应用内“问题反馈”提交。</pre>
+- 保存、添加、取消和删除按钮采用统一样式，随当前主题配色。日期与时间、自由记录与快捷复记使用一致的切换控件。
+- 灵感、使用记录和拼布使用同一种作品选择面板，可以搜索作品并查看封面。灵感封面改为在后台加载。
+- 拼布编辑中，选中或取消选中裁片时，只切换底部工具，画布位置保持稳定。</pre>
 </div>
 <p class="foot">更新清单：<a href="dl/stable.json">dl/stable.json</a> · 历史版本见 <a href="https://github.com/youyoudezhuzhu/ZhiJi-Release/releases">GitHub Releases</a></p>
 <p class="foot">所有文件通过 HTTPS 分发；App 下载后会校验 SHA-256 与 APK 签名。</p>
