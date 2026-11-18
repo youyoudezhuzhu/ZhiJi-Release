@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "channel": "stable",
-  "version_name": "1.2.1b8",
-  "version_code": 30,
-  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=30",
-  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1b8/ZhiJi-v1.2.1b8-original-signed.apk",
-  "sha256": "41f99081fb8a6a96caae37854fe6ea8e983cefa0d6d9d58da454c2b19307b890",
+  "version_name": "1.2.1b9",
+  "version_code": 31,
+  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=31",
+  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1b9/ZhiJi-v1.2.1b9-original-signed.apk",
+  "sha256": "d437280aa0c7f52791ceb121463d4d340c6f0ca71ec7e366fad5e7a13be60758",
   "signer_sha256": "32d3c3d60d76519669941cda0878a560e65d61453f4f59164eaceda30d93015e",
-  "source_commit": "4a095321a4486fa6833cf711ea157530027c88c7",
-  "notes": "## 织记 v1.2.1b8\n\n本次更新：\n\n- 原生拼布工作台：模板卡片、裁片选中与取消、缝线/线迹绘制、画布缩略图和退出确认统一。\n- DIY 布料与设计器：配色、纹理、预设、收藏和选料入口统一到主题角色。\n- 外观与动效：保存/添加/取消/删除按钮、筛选、互斥模式、搜索、空状态和作品选择等公共组件统一；新增四种自然纹理。\n- 订单识别：继续完善裁片尺寸、名称归类、多件数量提示和核对标记。\n- 性能：灵感缩略图改为后台加载与有界缓存；关闭动态效果时减少不必要的动画和状态开销。\n\n如遇问题，请通过应用内“问题反馈”提交。",
-  "published_at": "2026-11-18T15:38:03Z"
+  "source_commit": "178ee73de8cd9568e0a870581091805296a83062",
+  "notes": "## 织记 v1.2.1b9\n\n本次更新：\n\n- 拼布新增「电脑编辑」：手机和电脑连接同一局域网后，用电脑浏览器打开手机上的拼布工作台，输入配对码即可继续编辑并保存回「我的设计」。\n- 拼布手机编辑器重新整理，模板与操作区更紧凑；修复部分布纹边缘的显示问题。\n- 汇总新增入库统计 Excel 导出：包含入库汇总和物料明细，明细带封面、库存、价格等字段。\n- 使用记录中的材料选择、作品选择、日期与时间控件等交互进一步统一，并调整主题细节。\n\n如遇问题，请通过应用内“问题反馈”提交。",
+  "published_at": "2026-11-18T17:09:28Z"
 }
