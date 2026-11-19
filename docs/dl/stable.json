@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "channel": "stable",
-  "version_name": "1.2.1c1",
-  "version_code": 32,
-  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=32",
-  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1c1/ZhiJi-v1.2.1c1-original-signed.apk",
-  "sha256": "53e577c548f5ef9442fc314c45fa0f3f882804b7c6592db4c498610548367b5b",
+  "version_name": "1.2.1c2",
+  "version_code": 33,
+  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=33",
+  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1c2/ZhiJi-v1.2.1c2-original-signed.apk",
+  "sha256": "0e6f4efd4a18de0adbce72887041db6b2ebcd0082c03be388ecc778e601a3f9a",
   "signer_sha256": "32d3c3d60d76519669941cda0878a560e65d61453f4f59164eaceda30d93015e",
-  "source_commit": "8f3abfd7205c6099f75d74017831642f2a73d571",
-  "notes": "## 织记 v1.2.1c1\n\n本次更新：\n\n- 接入 Android 预见式返回：侧滑返回时提前预览上一页，返回手势与页面转场更连贯。\n- 统一底部抽屉和材料清单入口，减少不同页面之间交互方式不一致。\n- 修复状态栏底纹接缝，顶部背景过渡更完整。\n- 修复作品三点菜单收起时的闪动，并调整菜单圆角几何。\n\n如遇问题，请通过应用内“问题反馈”提交。",
-  "published_at": "2026-11-19T09:27:04Z"
+  "source_commit": "7f2b326566c3b186e928f6389ad312a298a054d5",
+  "notes": "## 织记 v1.2.1c2\n\n本次更新：\n\n- 修复全局预见式返回时上一页画面不完整、不刷新的问题。\n- 在所有页面侧滑返回时正确显示上一页预览；中途取消或完成返回后，页面层保留正确的画面状态。\n- 补充返回预览的 UI 冒烟测试。\n\n如遇问题，请通过应用内“问题反馈”提交。",
+  "published_at": "2026-11-19T14:02:35Z"
 }
