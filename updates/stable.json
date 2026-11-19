@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "channel": "stable",
-  "version_name": "1.2.1b9",
-  "version_code": 31,
-  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=31",
-  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1b9/ZhiJi-v1.2.1b9-original-signed.apk",
-  "sha256": "d437280aa0c7f52791ceb121463d4d340c6f0ca71ec7e366fad5e7a13be60758",
+  "version_name": "1.2.1c1",
+  "version_code": 32,
+  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=32",
+  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1c1/ZhiJi-v1.2.1c1-original-signed.apk",
+  "sha256": "53e577c548f5ef9442fc314c45fa0f3f882804b7c6592db4c498610548367b5b",
   "signer_sha256": "32d3c3d60d76519669941cda0878a560e65d61453f4f59164eaceda30d93015e",
-  "source_commit": "178ee73de8cd9568e0a870581091805296a83062",
-  "notes": "## 织记 v1.2.1b9\n\n本次更新：\n\n- 拼布新增「电脑编辑」：手机和电脑连接同一局域网后，用电脑浏览器打开手机上的拼布工作台，输入配对码即可继续编辑并保存回「我的设计」。\n- 拼布手机编辑器重新整理，模板与操作区更紧凑；修复部分布纹边缘的显示问题。\n- 汇总新增入库统计 Excel 导出：包含入库汇总和物料明细，明细带封面、库存、价格等字段。\n- 使用记录中的材料选择、作品选择、日期与时间控件等交互进一步统一，并调整主题细节。\n\n如遇问题，请通过应用内“问题反馈”提交。",
-  "published_at": "2026-11-18T17:09:28Z"
+  "source_commit": "8f3abfd7205c6099f75d74017831642f2a73d571",
+  "notes": "## 织记 v1.2.1c1\n\n本次更新：\n\n- 接入 Android 预见式返回：侧滑返回时提前预览上一页，返回手势与页面转场更连贯。\n- 统一底部抽屉和材料清单入口，减少不同页面之间交互方式不一致。\n- 修复状态栏底纹接缝，顶部背景过渡更完整。\n- 修复作品三点菜单收起时的闪动，并调整菜单圆角几何。\n\n如遇问题，请通过应用内“问题反馈”提交。",
+  "published_at": "2026-11-19T09:27:04Z"
 }
