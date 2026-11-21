@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "channel": "stable",
-  "version_name": "1.2.1c5",
-  "version_code": 36,
-  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=36",
-  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1c5/ZhiJi-v1.2.1c5-original-signed.apk",
-  "sha256": "2b559a4750d6ba9a0e021e6dc2b6733b51fa90c496809d3b9a3d2c3b86240e18",
+  "version_name": "1.2.1c6",
+  "version_code": 37,
+  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=37",
+  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1c6/ZhiJi-v1.2.1c6-original-signed.apk",
+  "sha256": "a3dd3224c95fb80edc4a078ec3649180b9263a0124cf9cdfc5fad2f9bb790153",
   "signer_sha256": "32d3c3d60d76519669941cda0878a560e65d61453f4f59164eaceda30d93015e",
-  "source_commit": "e76e07b0a4a73610956b7b6adb0ee1246d26d074",
-  "notes": "## 织记 v1.2.1c5\n\n本次更新：\n\n- 预见式返回改为按系统手势起点驱动，修正上一页揭示区域；慢速返回和不同边缘起手时更稳定。\n- 完善拼布电脑工作台，补齐桌面端操作与布局。\n- 拼布吸附更精确，支持整底贴布编辑。\n- 保留侧滑返回预览与取消后恢复当前页。\n\n如遇问题，请通过应用内“问题反馈”提交。",
-  "published_at": "2026-11-21T03:44:22Z"
+  "source_commit": "0a97f566bb3a6a5acc08b4a63d04893760c2e840",
+  "notes": "## 织记 v1.2.1c6\n\n本次更新：\n\n- 修复预见式返回主界面时悬浮底栏闪烁。\n- 一级页面返回交由系统处理，并优化预见式返回过渡。\n- 保留返回预览、取消手势恢复当前页和子页面返回父页面的行为。\n\n如遇问题，请通过应用内“问题反馈”提交。",
+  "published_at": "2026-11-21T09:13:07Z"
 }
