@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "channel": "stable",
-  "version_name": "1.2.1c7",
-  "version_code": 38,
-  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=38",
-  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1c7/ZhiJi-v1.2.1c7-original-signed.apk",
-  "sha256": "893182cf15d72f7b9f1e32be4bedf46bf8d02d9b428c205fe3ae30d244747c9a",
+  "version_name": "1.2.1c8",
+  "version_code": 39,
+  "apk_url": "https://youyoudezhuzhu.github.io/ZhiJi-Release/dl/latest.apk?v=39",
+  "apk_url_alt": "https://github.com/youyoudezhuzhu/ZhiJi-Release/releases/download/v1.2.1c8/ZhiJi-v1.2.1c8-original-signed.apk",
+  "sha256": "a79b0ed65483026bfd623eaaca5bfed662313325f2201239d472c824360250c3",
   "signer_sha256": "32d3c3d60d76519669941cda0878a560e65d61453f4f59164eaceda30d93015e",
-  "source_commit": "74c2e822a8bea3a3ef2fb6e47abcda111b204385",
-  "notes": "## 织记 v1.2.1c7\n\n本次更新：\n\n- 修复快速返回时上一页画面短暂闪烁的问题。\n- 保留慢速返回预览、取消手势恢复当前页和一级页面系统返回行为。\n- 补充快速返回的界面回归检查。\n\n如遇问题，请通过应用内“问题反馈”提交。",
-  "published_at": "2026-11-21T14:09:46Z"
+  "source_commit": "85e95f5e66bf23e690c4b0f4286ddf64ad81c82b",
+  "notes": "## 织记 v1.2.1c8\n\n本次更新：\n\n- 修复快滑返回后父页面入场动画重复播放的问题。\n- 优化快速返回时页面层次的衔接，避免上一页闪现或重复入场。\n- 保留慢速返回预览、取消手势恢复当前页和一级页面系统返回行为。\n\n如遇问题，请通过应用内“问题反馈”提交。",
+  "published_at": "2026-11-21T14:53:07Z"
 }
